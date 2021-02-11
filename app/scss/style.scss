@@ -93,7 +93,7 @@ body {
 .top {
     position: relative;
     padding-top: 175px;
-    min-height: 800px;
+    height: 800px;
     background: linear-gradient(90deg, #8159c6 0%, #6c7cff 100%);
 
     &::after {
@@ -103,6 +103,8 @@ body {
         right: 0;
         top: 103px;
         bottom: 0;
+        width: 30%;
+        height: 90%;
         background-image: url("../images/graph-el-1.svg");
         background-position: 0 0;
         background-repeat: no-repeat;
@@ -124,6 +126,10 @@ body {
     &__inner {
         display: flex;
         justify-content: space-between;
+    }
+
+    &__content {
+        width: 50%;
     }
 
     &__content-info {
@@ -203,16 +209,26 @@ body {
     &__image {
         position: relative;
         z-index: 13;
+        width: 523px;
 
         &::before {
             content: "";
             position: absolute;
-            left: -45px;
-            top: -55px;
+            left: -12%;
+            top: -12%;
             z-index: -1;
-            width: 750px;
-            height: 615px;
+            width: 144%;
+            height: 105%;
             background-image: url("../images/graph-el-2.svg");
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+
+        &-img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
@@ -284,4 +300,104 @@ body {
     width: 100%;
     height: 153px;
     background: linear-gradient(90deg, #ff9d66 0%, #ff7256 100%);
+}
+
+@media (max-width: 1550px) {
+    .top__image::before {
+        left: -31%;
+    }
+}
+
+@media (max-width: 1550px) {
+    .top__image::before {
+        display: none;
+    }
+
+    .top::after {
+        display: none;
+    }
+}
+
+@media (max-width: 1120px) {
+    .header__inner {
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+
+    .header__btn {
+        padding: 12px 9px;
+        font-size: 12px;
+    }
+
+    .menu {
+        order: 1;
+        margin-top: 10px;
+
+        &__list {
+            flex-wrap: wrap;
+        }
+
+        &__list-item {
+            padding: 0;
+            min-width: 148px;
+        }
+    }
+
+    .logo {
+        width: 131px;
+    }
+
+    .top {
+        &__inner {
+            flex-wrap: wrap;
+        }
+
+        &__content {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__content-box {
+            flex-wrap: wrap;
+        }
+
+        &__content-info {
+            margin: 0 auto;
+        }
+
+        &__content-link {
+            margin-bottom: 10px;
+        }
+
+        &__content-price {
+            margin: 0 auto 18px;
+        }
+
+        &__title {
+            margin-bottom: 25px;
+            font-size: 27px;
+            line-height: 120%;
+        }
+
+        &__image {
+            display: none;
+        }
+
+        &__content-lists {
+            margin-left: 5px;
+        }
+    }
+
+    .block {
+        top: 94.6%;
+        height: 43px;
+    }
+
+    .content-list {
+        text-align: left;
+
+        &::before {
+            left: -21%;
+        }
+    }
 }
