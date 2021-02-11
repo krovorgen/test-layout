@@ -1,1 +1,18 @@
-//
+%os-regular {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+}
+%os-semibold {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+}
+%os-bold {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+$main-color: #ffde00;
+$subtext-color: #c9c3f3;
+$text-color: #fff;
+$pulse-color: #ff885e;
+$black-color: #000;
